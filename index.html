@@ -16,7 +16,7 @@
 	<script src="js/prettify.js"></script>
 	
 	<script src="https://unpkg.com/jquery@1.9.1/jquery.js"></script>
-	<script src="js/jquery.toolbar.min.js"></script>
+	<script src="js/jquery.toolbar.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function ($) {
 
@@ -25,53 +25,53 @@
 				event.preventDefault();
 			});
 
-			$('div[data-toolbar="user-options"]').toolbar({
+			$('div[data-tbar-toolbar="user-options"]').toolbar({
 				content: '#user-options',
 				position: 'top',
 			});
 
-			$('div[data-toolbar="transport-options"]').toolbar({
+			$('div[data-tbar-toolbar="transport-options"]').toolbar({
 				content: '#transport-options',
 				position: 'top',
 			});
 
-			$('div[data-toolbar="transport-options-o"]').toolbar({
+			$('div[data-tbar-toolbar="transport-options-o"]').toolbar({
 				content: '#transport-options-o',
 				position: 'bottom',
 				event: 'click',
 				hideOnClick: true,
 			});
 
-			$('div[data-toolbar="content-option"]').toolbar({
+			$('div[data-tbar-toolbar="content-option"]').toolbar({
 				content: '#transport-options',
 			});
 
-			$('div[data-toolbar="position-option"]').toolbar({
+			$('div[data-tbar-toolbar="position-option"]').toolbar({
 				content: '#transport-options',
 				position: 'bottom',
 			});
 
-			$('div[data-toolbar="style-option"]').toolbar({
+			$('div[data-tbar-toolbar="style-option"]').toolbar({
 				content: '#transport-options',
 				position: 'bottom',
 				style: 'primary',
 			});
 
-			$('div[data-toolbar="animation-option"]').toolbar({
+			$('div[data-tbar-toolbar="animation-option"]').toolbar({
 				content: '#transport-options',
 				position: 'bottom',
 				style: 'primary',
 				animation: 'flyin'
 			});
 
-			$('div[data-toolbar="event-option"]').toolbar({
+			$('div[data-tbar-toolbar="event-option"]').toolbar({
 				content: '#transport-options',
 				position: 'bottom',
 				style: 'primary',
 				event: 'click',
 			});
 
-			$('div[data-toolbar="hide-option"]').toolbar({
+			$('div[data-tbar-toolbar="hide-option"]').toolbar({
 				content: '#transport-options',
 				position: 'bottom',
 				style: 'primary',
@@ -86,22 +86,22 @@
 				adjustment: 35
 			});
 
-			$('div[data-toolbar="set-01"]').toolbar({
+			$('div[data-tbar-toolbar="set-01"]').toolbar({
 				content: '#set-01-options',
 				position: 'top',
 			});
 
-			$('div[data-toolbar="set-02"]').toolbar({
+			$('div[data-tbar-toolbar="set-02"]').toolbar({
 				content: '#set-02-options',
 				position: 'left',
 			});
 
-			$('div[data-toolbar="set-03"]').toolbar({
+			$('div[data-tbar-toolbar="set-03"]').toolbar({
 				content: '#set-03-options',
 				position: 'bottom',
 			});
 
-			$('div[data-toolbar="set-04"]').toolbar({
+			$('div[data-tbar-toolbar="set-04"]').toolbar({
 				content: '#set-04-options',
 				position: 'right',
 			});
@@ -112,7 +112,7 @@
 
 			$("#transport-options-2").find('a').on('click', function () {
 				$this = $(this);
-				$button = $('div[data-toolbar="transport-options-2"]');
+				$button = $('div[data-tbar-toolbar="transport-options-2"]');
 				$newClass = $this.find('i').attr('class').substring(3);
 				$oldClass = $button.find('i').attr('class').substring(3);
 				if ($newClass != $oldClass) {
@@ -128,7 +128,7 @@
 
 			});
 
-			$('div[data-toolbar="transport-options-2"]').toolbar({
+			$('div[data-tbar-toolbar="transport-options-2"]').toolbar({
 				content: '#transport-options-2',
 				position: 'top',
 			});
@@ -143,8 +143,8 @@
 		<header>
 			<h1>Toolbar.Js</h1>
 			<p>A jQuery plugin that creates tooltip style toolbars</p>
-			<div data-toolbar="transport-options-2" data-toolbar-animation="flip"
-				class="btn-toolbar feature-toolbar btn-toolbar-primary text-center" data-toolbar-style="primary"><i
+			<div data-tbar-toolbar="transport-options-2" data-tbar-toolbar-animation="flip"
+				class="tbar-btn-toolbar feature-toolbar tbar-btn-toolbar-primary text-center" data-tbar-toolbar-style="primary"><i
 					class="fa fa-bicycle" style="position: relative"></i></div>
 
 			<small>By <a href="http://kinzett.co.nz">Paul Kinzett</a></small>
@@ -217,121 +217,121 @@
 			<h2>Examples</h2>
 			<span>Default</span>
 			<div class="samples">
-				<div data-toolbar="user-options" class="btn-toolbar pull-left"><i class="fa fa-cog"></i></div>
+				<div data-tbar-toolbar="user-options" class="tbar-btn-toolbar pull-left"><i class="fa fa-cog"></i></div>
 				<div class="clear"></div>
 			</div>
 			<span>Colorful</span>
 			<div class="samples">
-				<div data-toolbar="user-options" class="btn-toolbar btn-toolbar-primary pull-left"
-					data-toolbar-event="click" data-toolbar-style="primary"><i class="fa fa-cog"></i></div>
-				<div data-toolbar="user-options" class="btn-toolbar btn-toolbar-danger pull-left"
-					data-toolbar-style="danger"><i class="fa fa-cog"></i></div>
-				<div data-toolbar="user-options" class="btn-toolbar btn-toolbar-warning pull-left"
-					data-toolbar-style="warning"><i class="fa fa-cog"></i></div>
-				<div data-toolbar="user-options" class="btn-toolbar btn-toolbar-info pull-left"
-					data-toolbar-style="info"><i class="fa fa-cog"></i></div>
-				<div data-toolbar="user-options" class="btn-toolbar btn-toolbar-success pull-left"
-					data-toolbar-style="success"><i class="fa fa-cog"></i></div>
-				<div data-toolbar="user-options" class="btn-toolbar btn-toolbar-info-o pull-left"
-					data-toolbar-style="info-o"><i class="fa fa-cog"></i></div>
+				<div data-tbar-toolbar="user-options" class="tbar-btn-toolbar tbar-btn-toolbar-primary pull-left"
+					data-tbar-toolbar-event="click" data-tbar-toolbar-style="primary"><i class="fa fa-cog"></i></div>
+				<div data-tbar-toolbar="user-options" class="tbar-btn-toolbar tbar-btn-toolbar-danger pull-left"
+					data-tbar-toolbar-style="danger"><i class="fa fa-cog"></i></div>
+				<div data-tbar-toolbar="user-options" class="tbar-btn-toolbar tbar-btn-toolbar-warning pull-left"
+					data-tbar-toolbar-style="warning"><i class="fa fa-cog"></i></div>
+				<div data-tbar-toolbar="user-options" class="tbar-btn-toolbar tbar-btn-toolbar-info pull-left"
+					data-tbar-toolbar-style="info"><i class="fa fa-cog"></i></div>
+				<div data-tbar-toolbar="user-options" class="tbar-btn-toolbar tbar-btn-toolbar-success pull-left"
+					data-tbar-toolbar-style="success"><i class="fa fa-cog"></i></div>
+				<div data-tbar-toolbar="user-options" class="tbar-btn-toolbar tbar-btn-toolbar-info-o pull-left"
+					data-tbar-toolbar-style="info-o"><i class="fa fa-cog"></i></div>
 				<div class="clear"></div>
 			</div>
 			<span>Shades</span>
 			<div class="samples">
-				<div data-toolbar="user-options" class="btn-toolbar btn-toolbar-light pull-left"
-					data-toolbar-style="light"><i class="fa fa-cog"></i></div>
-				<div data-toolbar="user-options" class="btn-toolbar btn-toolbar-dark pull-left"
-					data-toolbar-style="dark"><i class="fa fa-cog"></i></div>
+				<div data-tbar-toolbar="user-options" class="tbar-btn-toolbar tbar-btn-toolbar-light pull-left"
+					data-tbar-toolbar-style="light"><i class="fa fa-cog"></i></div>
+				<div data-tbar-toolbar="user-options" class="tbar-btn-toolbar tbar-btn-toolbar-dark pull-left"
+					data-tbar-toolbar-style="dark"><i class="fa fa-cog"></i></div>
 				<div class="clear"></div>
 			</div>
 			<span>Customizable</span>
 			<div class="samples">
-				<div data-toolbar="transport-options" class="btn-toolbar btn-toolbar-primary pull-left"
-					data-toolbar-event="click" data-toolbar-style="primary"><i class="fa fa-plane"></i></div>
-				<div data-toolbar="set-01" class="btn-toolbar btn-toolbar-danger pull-left" data-toolbar-style="danger">
+				<div data-tbar-toolbar="transport-options" class="tbar-btn-toolbar tbar-btn-toolbar-primary pull-left"
+					data-tbar-toolbar-event="click" data-tbar-toolbar-style="primary"><i class="fa fa-plane"></i></div>
+				<div data-tbar-toolbar="set-01" class="tbar-btn-toolbar tbar-btn-toolbar-danger pull-left" data-tbar-toolbar-style="danger">
 					<i class="fa fa-line-chart"></i>
 				</div>
-				<div data-toolbar="set-02" class="btn-toolbar btn-toolbar-warning pull-left"
-					data-toolbar-style="warning"><i class="fa fa-apple"></i></div>
-				<div data-toolbar="set-03" class="btn-toolbar btn-toolbar-info pull-left" data-toolbar-style="info"><i
+				<div data-tbar-toolbar="set-02" class="tbar-btn-toolbar tbar-btn-toolbar-warning pull-left"
+					data-tbar-toolbar-style="warning"><i class="fa fa-apple"></i></div>
+				<div data-tbar-toolbar="set-03" class="tbar-btn-toolbar tbar-btn-toolbar-info pull-left" data-tbar-toolbar-style="info"><i
 						class="fa fa-bitcoin"></i></div>
-				<div data-toolbar="set-04" class="btn-toolbar btn-toolbar-success pull-left"
-					data-toolbar-style="success"><i class="fa fa-heart"></i></div>
-				<div data-toolbar="transport-options-o" class="btn-toolbar btn-toolbar-info-o pull-left"
-					data-toolbar-style="info-o"><i class="fa fa-truck"></i></div>
+				<div data-tbar-toolbar="set-04" class="tbar-btn-toolbar tbar-btn-toolbar-success pull-left"
+					data-tbar-toolbar-style="success"><i class="fa fa-heart"></i></div>
+				<div data-tbar-toolbar="transport-options-o" class="tbar-btn-toolbar tbar-btn-toolbar-info-o pull-left"
+					data-tbar-toolbar-style="info-o"><i class="fa fa-truck"></i></div>
 				<div class="clear"></div>
 			</div>
 			<span>Animations</span>
 			<div class="samples">
-				<div data-toolbar="transport-options" data-toolbar-animation="standard"
-					class="btn-toolbar btn-toolbar-primary pull-left" data-toolbar-event="click"
-					data-toolbar-style="primary"><i class="fa fa-plane"></i></div>
-				<div data-toolbar="transport-options" data-toolbar-animation="flip"
-					class="btn-toolbar btn-toolbar-danger pull-left" data-toolbar-style="danger"><i
+				<div data-tbar-toolbar="transport-options" data-tbar-toolbar-animation="standard"
+					class="tbar-btn-toolbar tbar-btn-toolbar-primary pull-left" data-tbar-toolbar-event="click"
+					data-tbar-toolbar-style="primary"><i class="fa fa-plane"></i></div>
+				<div data-tbar-toolbar="transport-options" data-tbar-toolbar-animation="flip"
+					class="tbar-btn-toolbar tbar-btn-toolbar-danger pull-left" data-tbar-toolbar-style="danger"><i
 						class="fa fa-bicycle"></i></div>
-				<div data-toolbar="transport-options" data-toolbar-animation="grow"
-					class="btn-toolbar btn-toolbar-warning pull-left" data-toolbar-style="warning"><i
+				<div data-tbar-toolbar="transport-options" data-tbar-toolbar-animation="grow"
+					class="tbar-btn-toolbar tbar-btn-toolbar-warning pull-left" data-tbar-toolbar-style="warning"><i
 						class="fa fa-car"></i></div>
-				<div data-toolbar="transport-options" data-toolbar-animation="flyin"
-					class="btn-toolbar btn-toolbar-info pull-left" data-toolbar-style="info"><i class="fa fa-train"></i>
+				<div data-tbar-toolbar="transport-options" data-tbar-toolbar-animation="flyin"
+					class="tbar-btn-toolbar tbar-btn-toolbar-info pull-left" data-tbar-toolbar-style="info"><i class="fa fa-train"></i>
 				</div>
-				<div data-toolbar="transport-options" data-toolbar-animation="bounce"
-					class="btn-toolbar btn-toolbar-success pull-left" data-toolbar-style="success"><i
+				<div data-tbar-toolbar="transport-options" data-tbar-toolbar-animation="bounce"
+					class="tbar-btn-toolbar tbar-btn-toolbar-success pull-left" data-tbar-toolbar-style="success"><i
 						class="fa fa-subway"></i></div>
-				<div data-toolbar="transport-options" data-toolbar-animation="grow"
-					class="btn-toolbar btn-toolbar-info-o pull-left" data-toolbar-style="info-o"><i
+				<div data-tbar-toolbar="transport-options" data-tbar-toolbar-animation="grow"
+					class="tbar-btn-toolbar tbar-btn-toolbar-info-o pull-left" data-tbar-toolbar-style="info-o"><i
 						class="fa fa-truck"></i></div>
 				<div class="clear"></div>
 			</div>
 			<br><br><br>
 			<div class="example">
 				<h3>Creating Buttons</h3>
-				<p>The button can be created by adding the class .btn-toolbar to a html element e.g. a div, a, span,
+				<p>The button can be created by adding the class .tbar-btn-toolbar to a html element e.g. a div, a, span,
 					button, while the colors can be controller with different CSS classes.</p>
 				<section class="left">
 					<br><br>
 					<div class="row">
-						<div class="btn-toolbar"><i class="fa fa-cog"></i></div>
-						<pre class="prettyprint">&lt;div class="btn-toolbar"&gt;...&lt;/div&gt;</pre>
+						<div class="tbar-btn-toolbar"><i class="fa fa-cog"></i></div>
+						<pre class="prettyprint">&lt;div class="tbar-btn-toolbar"&gt;...&lt;/div&gt;</pre>
 					</div>
 
 					<div class="row">
-						<div class="btn-toolbar btn-toolbar-primary"><i class="fa fa-cog"></i></div>
+						<div class="tbar-btn-toolbar tbar-btn-toolbar-primary"><i class="fa fa-cog"></i></div>
 						<pre
-							class="prettyprint">&lt;div class="btn-toolbar btn-toolbar-primary"&gt;...&lt;/div&gt;</pre>
+							class="prettyprint">&lt;div class="tbar-btn-toolbar tbar-btn-toolbar-primary"&gt;...&lt;/div&gt;</pre>
 					</div>
 
 					<div class="row">
-						<div class="btn-toolbar btn-toolbar-danger"><i class="fa fa-cog"></i></div>
-						<pre class="prettyprint">&lt;div class="btn-toolbar btn-toolbar-danger"&gt;...&lt;/div&gt;</pre>
+						<div class="tbar-btn-toolbar tbar-btn-toolbar-danger"><i class="fa fa-cog"></i></div>
+						<pre class="prettyprint">&lt;div class="tbar-btn-toolbar tbar-btn-toolbar-danger"&gt;...&lt;/div&gt;</pre>
 					</div>
 
 					<div class="row">
-						<div class="btn-toolbar btn-toolbar-warning"><i class="fa fa-cog"></i></div>
+						<div class="tbar-btn-toolbar tbar-btn-toolbar-warning"><i class="fa fa-cog"></i></div>
 						<pre
-							class="prettyprint">&lt;div class="btn-toolbar btn-toolbar-warning"&gt;...&lt;/div&gt;</pre>
+							class="prettyprint">&lt;div class="tbar-btn-toolbar tbar-btn-toolbar-warning"&gt;...&lt;/div&gt;</pre>
 					</div>
 
 					<div class="row">
-						<div class="btn-toolbar btn-toolbar-info"><i class="fa fa-cog"></i></div>
-						<pre class="prettyprint">&lt;div class="btn-toolbar btn-toolbar-info"&gt;...&lt;/div&gt;</pre>
+						<div class="tbar-btn-toolbar tbar-btn-toolbar-info"><i class="fa fa-cog"></i></div>
+						<pre class="prettyprint">&lt;div class="tbar-btn-toolbar tbar-btn-toolbar-info"&gt;...&lt;/div&gt;</pre>
 					</div>
 					<div class="row">
-						<div class="btn-toolbar btn-toolbar-success"><i class="fa fa-cog"></i></div>
+						<div class="tbar-btn-toolbar tbar-btn-toolbar-success"><i class="fa fa-cog"></i></div>
 						<pre
-							class="prettyprint">&lt;div class="btn-toolbar btn-toolbar-success"&gt;...&lt;/div&gt;</pre>
+							class="prettyprint">&lt;div class="tbar-btn-toolbar tbar-btn-toolbar-success"&gt;...&lt;/div&gt;</pre>
 					</div>
 					<div class="row">
-						<div class="btn-toolbar btn-toolbar-info-o"><i class="fa fa-cog"></i></div>
-						<pre class="prettyprint">&lt;div class="btn-toolbar btn-toolbar-info-o"&gt;...&lt;/div&gt;</pre>
+						<div class="tbar-btn-toolbar tbar-btn-toolbar-info-o"><i class="fa fa-cog"></i></div>
+						<pre class="prettyprint">&lt;div class="tbar-btn-toolbar tbar-btn-toolbar-info-o"&gt;...&lt;/div&gt;</pre>
 					</div>
 					<div class="row">
-						<div class="btn-toolbar btn-toolbar-dark"><i class="fa fa-cog"></i></div>
-						<pre class="prettyprint">&lt;div class="btn-toolbar btn-toolbar-dark"&gt;...&lt;/div&gt;</pre>
+						<div class="tbar-btn-toolbar tbar-btn-toolbar-dark"><i class="fa fa-cog"></i></div>
+						<pre class="prettyprint">&lt;div class="tbar-btn-toolbar tbar-btn-toolbar-dark"&gt;...&lt;/div&gt;</pre>
 					</div>
 					<div class="row">
-						<div class="btn-toolbar btn-toolbar-light"><i class="fa fa-cog"></i></div>
-						<pre class="prettyprint">&lt;div class="btn-toolbar btn-toolbar-light"&gt;...&lt;/div&gt;</pre>
+						<div class="tbar-btn-toolbar tbar-btn-toolbar-light"><i class="fa fa-cog"></i></div>
+						<pre class="prettyprint">&lt;div class="tbar-btn-toolbar tbar-btn-toolbar-light"&gt;...&lt;/div&gt;</pre>
 					</div>
 				</section>
 				<section class="right">
@@ -345,32 +345,32 @@
 
 			<span>Include the plugin javascript file along with jquery</span>
 			<pre class="prettyprint">
-&lt;script src="jquery.toolbar.js"&gt;&lt;/script&gt;
-</pre>
+				&lt;script src="jquery.toolbar.js"&gt;&lt;/script&gt;
+				</pre>
 			<br />
 
 			<span>Include the css files</span>
 			<pre class="prettyprint">
-&lt;link href="jquery.toolbar.css" rel="stylesheet" /&gt;
-</pre>
+				&lt;link href="jquery.toolbar.css" rel="stylesheet" /&gt;
+				</pre>
 			<br />
 
 			<span>Define your toolbar HTML anywhere on the page. This is where you define the icons you want to appear
 				in your toolbar. Remember to add the hidden class so the toolbar doesnt appear on the page.</span>
 			<pre class="prettyprint">
-&lt;div id="toolbar-options" class="hidden"&gt;
-   &lt;a href="#"&gt;&lt;i class="fa fa-plane"&gt;&lt;/i&gt;&lt;/a&gt;
-   &lt;a href="#"&gt;&lt;i class="fa fa-car"&gt;&lt;/i&gt;&lt;/a&gt;
-   &lt;a href="#"&gt;&lt;i class="fa fa-bicycle"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;/div&gt;
-</pre>
+				&lt;div id="toolbar-options" class="hidden"&gt;
+				&lt;a href="#"&gt;&lt;i class="fa fa-plane"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#"&gt;&lt;i class="fa fa-car"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#"&gt;&lt;i class="fa fa-bicycle"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;/div&gt;
+				</pre>
 			<br />
 
 			<span>Attach the toolbar to an element passing in your options as an object. Available options are detailed
 				below.</span>
 			<pre class="prettyprint">
-$('#element').toolbar( options );
-</pre>
+				$('#element').toolbar( options );
+				</pre>
 
 			<br /><br>
 			<h2>Options</h2>
@@ -380,13 +380,13 @@ $('#element').toolbar( options );
 				<h3>Content</h3>
 				<p>This should be the ID of the element which contains your toolbar icons.</p>
 				<section class="left">
-					<div data-toolbar="content-option" class="btn-toolbar"><i class="fa fa-cog"></i></div>
+					<div data-tbar-toolbar="content-option" class="tbar-btn-toolbar"><i class="fa fa-cog"></i></div>
 				</section>
 				<section class="right">
 					<pre class="prettyprint">
-$('#button').toolbar({
-	content: '#toolbar-options',
-});</pre>
+						$('#button').toolbar({
+							content: '#toolbar-options',
+						});</pre>
 				</section>
 				<div class="clear"></div>
 
@@ -394,14 +394,14 @@ $('#button').toolbar({
 				<p>The toolbar can be positioned to the top, left, right or bottom of the element. Set the value of
 					position to where you want the toolbar to appear.</p>
 				<section class="left">
-					<div data-toolbar="position-option" class="btn-toolbar"><i class="fa fa-cog"></i></div>
+					<div data-tbar-toolbar="position-option" class="tbar-btn-toolbar"><i class="fa fa-cog"></i></div>
 				</section>
 				<section class="right">
 					<pre class="prettyprint">
-$('#button').toolbar({
-	content: '#toolbar-options',
-	position: 'bottom'
-});</pre>
+						$('#button').toolbar({
+							content: '#toolbar-options',
+							position: 'bottom'
+						});</pre>
 				</section>
 				<div class="clear"></div>
 			</div>
@@ -412,7 +412,7 @@ $('#button').toolbar({
 					You can mix and match styles for the buttons and toolbars to create any color combo you want (but
 					genrally the same styles go together).</p>
 				<section class="left">
-					<div data-toolbar="style-option" class="btn-toolbar btn-toolbar-primary"><i class="fa fa-cog"></i>
+					<div data-tbar-toolbar="style-option" class="tbar-btn-toolbar tbar-btn-toolbar-primary"><i class="fa fa-cog"></i>
 					</div>
 				</section>
 				<section class="right">
@@ -432,7 +432,7 @@ $('#button').toolbar({
 					the animation which can be viewed in the example above. From left to right the options are standard,
 					flip, grow, flyin, and bounce.</p>
 				<section class="left">
-					<div data-toolbar="animation-option" class="btn-toolbar btn-toolbar-primary"><i
+					<div data-tbar-toolbar="animation-option" class="tbar-btn-toolbar tbar-btn-toolbar-primary"><i
 							class="fa fa-cog"></i></div>
 				</section>
 				<section class="right">
@@ -452,7 +452,7 @@ $('#button').toolbar({
 				<p>The toolbar can be triggered by either a click event, or a hover event. You can set your preference
 					in the event option.</p>
 				<section class="left">
-					<div data-toolbar="event-option" class="btn-toolbar btn-toolbar-primary"><i class="fa fa-cog"></i>
+					<div data-tbar-toolbar="event-option" class="tbar-btn-toolbar tbar-btn-toolbar-primary"><i class="fa fa-cog"></i>
 					</div>
 				</section>
 				<section class="right">
@@ -474,7 +474,7 @@ $('#button').toolbar({
 					to true (use when you have set the event option as click). If set to false, or not set at all then
 					the user will need to click on the button to close the toolbar.</p>
 				<section class="left">
-					<div data-toolbar="hide-option" class="btn-toolbar btn-toolbar-primary"><i class="fa fa-cog"></i>
+					<div data-tbar-toolbar="hide-option" class="tbar-btn-toolbar tbar-btn-toolbar-primary"><i class="fa fa-cog"></i>
 					</div>
 				</section>
 				<section class="right">
@@ -579,19 +579,19 @@ $('#button').toolbar({
 
 			<span>Use data attributes to attach a single toolbar to many elements.</span>
 			<pre class="prettyprint">
-&lt;div data-toolbar="user-options"&gt;&lt;/div&gt;
+&lt;div data-tbar-toolbar="user-options"&gt;&lt;/div&gt;
 </pre>
 			<pre class="prettyprint">
-$('div[data-toolbar="user-options"]').toolbar( options );
+$('div[data-tbar-toolbar="user-options"]').toolbar( options );
 </pre>
 			<br />
 
 			<span>You can also set individual toolbar options using data attributes on the buttons.</span>
 			<pre class="prettyprint">
 &lt;div
-   data-toolbar="user-options"
-   data-toolbar-event="click"
-   data-toolbar-style="primary"
+   data-tbar-toolbar="user-options"
+   data-tbar-toolbar-event="click"
+   data-tbar-toolbar-style="primary"
 &gt;
 </pre>
 			<br />

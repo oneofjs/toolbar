@@ -60,7 +60,7 @@ section {
 	margin-bottom: 50px;
 }
 
-.btn-toolbar {
+.tbar-btn-toolbar {
 	z-index: 2;
 	margin: 55px 30px 0px 40px;
 }
@@ -138,7 +138,7 @@ pre.prettyprint, code.prettyprint {
 	border-color: #E4E4E4 !important;
 }
 
-.samples .btn-toolbar {
+.samples .tbar-btn-toolbar {
 	margin: 30px 30px;
 }
 
@@ -150,7 +150,7 @@ pre.prettyprint, code.prettyprint {
 	float: left;
 }
 
-.row div.btn-toolbar {
+.row div.tbar-btn-toolbar {
 	margin: 12px 70px 12px 30px;
 }
 

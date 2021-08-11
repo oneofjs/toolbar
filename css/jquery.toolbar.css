@@ -1,10 +1,10 @@
-.tool-container, .tool-item, .btn-toolbar {
+.tbar-tool-container, .tbar-tool-item, .tbar-btn-toolbar {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
 }
 
-.btn-toolbar {
+.tbar-btn-toolbar {
   background: #364347;
   width: 20px;
   height: 20px;
@@ -14,131 +14,131 @@
   display: block;
   transition: none;
 }
-.btn-toolbar > i {
+.tbar-btn-toolbar > i {
   color: #02baf2;
   font-size: 16px;
 }
-.btn-toolbar:hover {
+.tbar-btn-toolbar:hover {
   background: #02baf2;
   cursor: pointer;
 }
-.btn-toolbar:hover > i {
+.tbar-btn-toolbar:hover > i {
   color: white;
 }
-.btn-toolbar-primary {
+.tbar-btn-toolbar-primary {
   background-color: #009dcd;
 }
-.btn-toolbar-primary.pressed {
+.tbar-btn-toolbar-primary.pressed {
   background-color: #02baf2;
 }
-.btn-toolbar-primary:hover {
+.tbar-btn-toolbar-primary:hover {
   background-color: #02baf2;
 }
-.btn-toolbar-primary > i {
+.tbar-btn-toolbar-primary > i {
   color: white;
 }
-.btn-toolbar-danger {
+.tbar-btn-toolbar-danger {
   background-color: #cc0000;
 }
-.btn-toolbar-danger.pressed {
+.tbar-btn-toolbar-danger.pressed {
   background-color: #f84545;
 }
-.btn-toolbar-danger:hover {
+.tbar-btn-toolbar-danger:hover {
   background-color: #f84545;
 }
-.btn-toolbar-danger > i {
+.tbar-btn-toolbar-danger > i {
   color: white;
 }
-.btn-toolbar-warning {
+.tbar-btn-toolbar-warning {
   background-color: #f3bc65;
 }
-.btn-toolbar-warning.pressed {
+.tbar-btn-toolbar-warning.pressed {
   background-color: #fad46b;
 }
-.btn-toolbar-warning:hover {
+.tbar-btn-toolbar-warning:hover {
   background-color: #fad46b;
 }
-.btn-toolbar-warning > i {
+.tbar-btn-toolbar-warning > i {
   color: white;
 }
-.btn-toolbar-info {
+.tbar-btn-toolbar-info {
   background-color: #e96300;
 }
-.btn-toolbar-info.pressed {
+.tbar-btn-toolbar-info.pressed {
   background-color: #f58410;
 }
-.btn-toolbar-info:hover {
+.tbar-btn-toolbar-info:hover {
   background-color: #f58410;
 }
-.btn-toolbar-info > i {
+.tbar-btn-toolbar-info > i {
   color: white;
 }
-.btn-toolbar-success {
+.tbar-btn-toolbar-success {
   background-color: #28948c;
 }
-.btn-toolbar-success.pressed {
+.tbar-btn-toolbar-success.pressed {
   background-color: #3eb5ac;
 }
-.btn-toolbar-success:hover {
+.tbar-btn-toolbar-success:hover {
   background-color: #3eb5ac;
 }
-.btn-toolbar-success > i {
+.tbar-btn-toolbar-success > i {
   color: white;
 }
-.btn-toolbar-info-o {
+.tbar-btn-toolbar-info-o {
   background-color: #9175bd;
 }
-.btn-toolbar-info-o.pressed {
+.tbar-btn-toolbar-info-o.pressed {
   background-color: #a88cd5;
 }
-.btn-toolbar-info-o:hover {
+.tbar-btn-toolbar-info-o:hover {
   background-color: #a88cd5;
 }
-.btn-toolbar-info-o > i {
+.tbar-btn-toolbar-info-o > i {
   color: white;
 }
-.btn-toolbar-light {
+.tbar-btn-toolbar-light {
   background-color: #b2c6cd;
 }
-.btn-toolbar-light.pressed {
+.tbar-btn-toolbar-light.pressed {
   background-color: #d6e1e5;
 }
-.btn-toolbar-light:hover {
+.tbar-btn-toolbar-light:hover {
   background-color: #d6e1e5;
 }
-.btn-toolbar-light > i {
+.tbar-btn-toolbar-light > i {
   color: white;
 }
-.btn-toolbar-dark {
+.tbar-btn-toolbar-dark {
   background-color: #364347;
 }
-.btn-toolbar-dark.pressed {
+.tbar-btn-toolbar-dark.pressed {
   background-color: #5e696d;
 }
-.btn-toolbar-dark:hover {
+.tbar-btn-toolbar-dark:hover {
   background-color: #5e696d;
 }
-.btn-toolbar-dark > i {
+.tbar-btn-toolbar-dark > i {
   color: white;
 }
-.tool-container {
+.tbar-tool-container {
   background-color: #5e696d;
   background-size: 100% 100%;
   border-radius: 6px;
   position: absolute;
 }
-.tool-container.tool-top,
-.tool-container.tool-bottom {
+.tbar-tool-container.tbar-tool-top,
+.tbar-tool-container.tbar-tool-bottom {
   height: 40px;
   border-bottom: 0px solid #beb8b8;
 }
-.tool-container.tool-top .tool-item,
-.tool-container.tool-bottom .tool-item {
+.tbar-tool-container.tbar-tool-top .tbar-tool-item,
+.tbar-tool-container.tbar-tool-bottom .tbar-tool-item {
   float: left;
   border-right: 0;
   border-left: 0;
 }
-.tool-item {
+.tbar-tool-item {
   height: 100%;
   display: block;
   width: 20px;
@@ -147,253 +147,253 @@
   padding: 10px;
   transition: none;
 }
-.tool-item > .fa {
+.tbar-tool-item > .fa {
   color: #b2c6cd;
 }
-.tool-item.selected,
-.tool-item:hover {
+.tbar-tool-item.selected,
+.tbar-tool-item:hover {
   background: #02baf2;
 }
-.tool-item.selected > .fa,
-.tool-item:hover > .fa {
+.tbar-tool-item.selected > .fa,
+.tbar-tool-item:hover > .fa {
   color: white;
 }
-.tool-top .tool-item:first-child:hover,
-.tool-bottom .tool-item:first-child:hover {
+.tbar-tool-top .tbar-tool-item:first-child:hover,
+.tbar-tool-bottom .tbar-tool-item:first-child:hover {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
-.tool-top .tool-item:last-child:hover,
-.tool-bottom .tool-item:last-child:hover {
+.tbar-tool-top .tbar-tool-item:last-child:hover,
+.tbar-tool-bottom .tbar-tool-item:last-child:hover {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
-.tool-vertical-top .tool-item:first-child:hover,
-.tool-vertical-bottom .tool-item:first-child:hover,
-.tool-right .tool-item:first-child:hover,
-.tool-left .tool-item:first-child:hover {
+.tbar-tool-vertical-top .tbar-tool-item:first-child:hover,
+.tbar-tool-vertical-bottom .tbar-tool-item:first-child:hover,
+.tbar-tool-right .tbar-tool-item:first-child:hover,
+.tbar-tool-left .tbar-tool-item:first-child:hover {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
-.tool-vertical-top .tool-item:last-child:hover,
-.tool-vertical-bottom .tool-item:last-child:hover,
-.tool-right .tool-item:last-child:hover,
-.tool-left .tool-item:last-child:hover {
+.tbar-tool-vertical-top .tbar-tool-item:last-child:hover,
+.tbar-tool-vertical-bottom .tbar-tool-item:last-child:hover,
+.tbar-tool-right .tbar-tool-item:last-child:hover,
+.tbar-tool-left .tbar-tool-item:last-child:hover {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
 }
-.tool-container .arrow {
+.tbar-tool-container .arrow {
   width: 0;
   height: 0;
   position: absolute;
   border-width: 7px;
   border-style: solid;
 }
-.tool-container.tool-top .arrow {
+.tbar-tool-container.tbar-tool-top .arrow {
   border-color: #5e696d transparent transparent;
   left: 50%;
   bottom: -14px;
   margin-left: -7px;
 }
-.tool-container.tool-bottom .arrow {
+.tbar-tool-container.tbar-tool-bottom .arrow {
   border-color: transparent transparent #5e696d;
   left: 50%;
   top: -14px;
   margin-left: -7px;
 }
-.tool-container.tool-left .arrow {
+.tbar-tool-container.tbar-tool-left .arrow {
   border-color: transparent transparent transparent #5e696d;
   top: 50%;
   right: -14px;
   margin-top: -7px;
 }
-.tool-container.tool-right .arrow {
+.tbar-tool-container.tbar-tool-right .arrow {
   border-color: transparent #5e696d transparent transparent;
   top: 50%;
   left: -14px;
   margin-top: -7px;
 }
-.toolbar-primary {
+.tbar-toolbar-primary {
   background-color: #02baf2;
 }
-.toolbar-primary.tool-top .arrow {
+.tbar-toolbar-primary.tbar-tool-top .arrow {
   border-color: #02baf2 transparent transparent;
 }
-.toolbar-primary.tool-bottom .arrow {
+.tbar-toolbar-primary.tbar-tool-bottom .arrow {
   border-color: transparent transparent #02baf2;
 }
-.toolbar-primary.tool-left .arrow {
+.tbar-toolbar-primary.tbar-tool-left .arrow {
   border-color: transparent transparent transparent #02baf2;
 }
-.toolbar-primary.tool-right .arrow {
+.tbar-toolbar-primary.tbar-tool-right .arrow {
   border-color: transparent #02baf2 transparent transparent;
 }
-.toolbar-primary .tool-item > .fa {
+.tbar-toolbar-primary .tbar-tool-item > .fa {
   color: white;
 }
-.toolbar-primary .tool-item.selected,
-.toolbar-primary .tool-item:hover {
+.tbar-toolbar-primary .tbar-tool-item.selected,
+.tbar-toolbar-primary .tbar-tool-item:hover {
   background: #009dcd;
   color: white;
 }
-.toolbar-danger {
+.tbar-toolbar-danger {
   background-color: #f84545;
 }
-.toolbar-danger.tool-top .arrow {
+.tbar-toolbar-danger.tbar-tool-top .arrow {
   border-color: #f84545 transparent transparent;
 }
-.toolbar-danger.tool-bottom .arrow {
+.tbar-toolbar-danger.tbar-tool-bottom .arrow {
   border-color: transparent transparent #f84545;
 }
-.toolbar-danger.tool-left .arrow {
+.tbar-toolbar-danger.tbar-tool-left .arrow {
   border-color: transparent transparent transparent #f84545;
 }
-.toolbar-danger.tool-right .arrow {
+.tbar-toolbar-danger.tbar-tool-right .arrow {
   border-color: transparent #f84545 transparent transparent;
 }
-.toolbar-danger .tool-item > .fa {
+.tbar-toolbar-danger .tbar-tool-item > .fa {
   color: white;
 }
-.toolbar-danger .tool-item.selected,
-.toolbar-danger .tool-item:hover {
+.tbar-toolbar-danger .tbar-tool-item.selected,
+.tbar-toolbar-danger .tbar-tool-item:hover {
   background: #cc0000;
   color: white;
 }
-.toolbar-warning {
+.tbar-toolbar-warning {
   background-color: #f3bc65;
 }
-.toolbar-warning.tool-top .arrow {
+.tbar-toolbar-warning.tbar-tool-top .arrow {
   border-color: #f3bc65 transparent transparent;
 }
-.toolbar-warning.tool-bottom .arrow {
+.tbar-toolbar-warning.tbar-tool-bottom .arrow {
   border-color: transparent transparent #f3bc65;
 }
-.toolbar-warning.tool-left .arrow {
+.tbar-toolbar-warning.tbar-tool-left .arrow {
   border-color: transparent transparent transparent #f3bc65;
 }
-.toolbar-warning.tool-right .arrow {
+.tbar-toolbar-warning.tbar-tool-right .arrow {
   border-color: transparent #f3bc65 transparent transparent;
 }
-.toolbar-warning .tool-item > .fa {
+.tbar-toolbar-warning .tbar-tool-item > .fa {
   color: white;
 }
-.toolbar-warning .tool-item.selected,
-.toolbar-warning .tool-item:hover {
+.tbar-toolbar-warning .tbar-tool-item.selected,
+.tbar-toolbar-warning .tbar-tool-item:hover {
   background: #fad46b;
   color: white;
 }
-.toolbar-info {
+.tbar-toolbar-info {
   background-color: #e96300;
 }
-.toolbar-info.tool-top .arrow {
+.tbar-toolbar-info.tbar-tool-top .arrow {
   border-color: #e96300 transparent transparent;
 }
-.toolbar-info.tool-bottom .arrow {
+.tbar-toolbar-info.tbar-tool-bottom .arrow {
   border-color: transparent transparent #e96300;
 }
-.toolbar-info.tool-left .arrow {
+.tbar-toolbar-info.tbar-tool-left .arrow {
   border-color: transparent transparent transparent #e96300;
 }
-.toolbar-info.tool-right .arrow {
+.tbar-toolbar-info.tbar-tool-right .arrow {
   border-color: transparent #e96300 transparent transparent;
 }
-.toolbar-info .tool-item > .fa {
+.tbar-toolbar-info .tbar-tool-item > .fa {
   color: white;
 }
-.toolbar-info .tool-item.selected,
-.toolbar-info .tool-item:hover {
+.tbar-toolbar-info .tbar-tool-item.selected,
+.tbar-toolbar-info .tbar-tool-item:hover {
   background: #f58410;
   color: white;
 }
-.toolbar-success {
+.tbar-toolbar-success {
   background-color: #28948c;
 }
-.toolbar-success.tool-top .arrow {
+.tbar-toolbar-success.tbar-tool-top .arrow {
   border-color: #28948c transparent transparent;
 }
-.toolbar-success.tool-bottom .arrow {
+.tbar-toolbar-success.tbar-tool-bottom .arrow {
   border-color: transparent transparent #28948c;
 }
-.toolbar-success.tool-left .arrow {
+.tbar-toolbar-success.tbar-tool-left .arrow {
   border-color: transparent transparent transparent #28948c;
 }
-.toolbar-success.tool-right .arrow {
+.tbar-toolbar-success.tbar-tool-right .arrow {
   border-color: transparent #28948c transparent transparent;
 }
-.toolbar-success .tool-item > .fa {
+.tbar-toolbar-success .tbar-tool-item > .fa {
   color: white;
 }
-.toolbar-success .tool-item.selected,
-.toolbar-success .tool-item:hover {
+.tbar-toolbar-success .tbar-tool-item.selected,
+.tbar-toolbar-success .tbar-tool-item:hover {
   background: #3eb5ac;
   color: white;
 }
-.toolbar-info-o {
+.tbar-toolbar-info-o {
   background-color: #9175bd;
 }
-.toolbar-info-o.tool-top .arrow {
+.tbar-toolbar-info-o.tbar-tool-top .arrow {
   border-color: #9175bd transparent transparent;
 }
-.toolbar-info-o.tool-bottom .arrow {
+.tbar-toolbar-info-o.tbar-tool-bottom .arrow {
   border-color: transparent transparent #9175bd;
 }
-.toolbar-info-o.tool-left .arrow {
+.tbar-toolbar-info-o.tbar-tool-left .arrow {
   border-color: transparent transparent transparent #9175bd;
 }
-.toolbar-info-o.tool-right .arrow {
+.tbar-toolbar-info-o.tbar-tool-right .arrow {
   border-color: transparent #9175bd transparent transparent;
 }
-.toolbar-info-o .tool-item > .fa {
+.tbar-toolbar-info-o .tbar-tool-item > .fa {
   color: white;
 }
-.toolbar-info-o .tool-item.selected,
-.toolbar-info-o .tool-item:hover {
+.tbar-toolbar-info-o .tbar-tool-item.selected,
+.tbar-toolbar-info-o .tbar-tool-item:hover {
   background: #a88cd5;
   color: white;
 }
-.toolbar-light {
+.tbar-toolbar-light {
   background-color: #b2c6cd;
 }
-.toolbar-light.tool-top .arrow {
+.tbar-toolbar-light.tbar-tool-top .arrow {
   border-color: #b2c6cd transparent transparent;
 }
-.toolbar-light.tool-bottom .arrow {
+.tbar-toolbar-light.tbar-tool-bottom .arrow {
   border-color: transparent transparent #b2c6cd;
 }
-.toolbar-light.tool-left .arrow {
+.tbar-toolbar-light.tbar-tool-left .arrow {
   border-color: transparent transparent transparent #b2c6cd;
 }
-.toolbar-light.tool-right .arrow {
+.tbar-toolbar-light.tbar-tool-right .arrow {
   border-color: transparent #b2c6cd transparent transparent;
 }
-.toolbar-light .tool-item > .fa {
+.tbar-toolbar-light .tbar-tool-item > .fa {
   color: white;
 }
-.toolbar-light .tool-item.selected,
-.toolbar-light .tool-item:hover {
+.tbar-toolbar-light .tbar-tool-item.selected,
+.tbar-toolbar-light .tbar-tool-item:hover {
   background: #d6e1e5;
   color: white;
 }
-.toolbar-dark {
+.tbar-toolbar-dark {
   background-color: #364347;
 }
-.toolbar-dark.tool-top .arrow {
+.tbar-toolbar-dark.tbar-tool-top .arrow {
   border-color: #364347 transparent transparent;
 }
-.toolbar-dark.tool-bottom .arrow {
+.tbar-toolbar-dark.tbar-tool-bottom .arrow {
   border-color: transparent transparent #364347;
 }
-.toolbar-dark.tool-left .arrow {
+.tbar-toolbar-dark.tbar-tool-left .arrow {
   border-color: transparent transparent transparent #364347;
 }
-.toolbar-dark.tool-right .arrow {
+.tbar-toolbar-dark.tbar-tool-right .arrow {
   border-color: transparent #364347 transparent transparent;
 }
-.toolbar-dark .tool-item > .fa {
+.tbar-toolbar-dark .tbar-tool-item > .fa {
   color: white;
 }
-.toolbar-dark .tool-item.selected,
-.toolbar-dark .tool-item:hover {
+.tbar-toolbar-dark .tbar-tool-item.selected,
+.tbar-toolbar-dark .tbar-tool-item:hover {
   background: #5e696d;
   color: white;
 }
