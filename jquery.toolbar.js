@@ -32,10 +32,10 @@ if ( typeof Object.create !== 'function' ) {
             self.options = $.extend( {}, $.fn.toolbar.options, options );
             self.metadata = self.$elem.data();
             self.overrideOptions();
-            self.toolbar = $('<div class="tool-container" />')
-                .addClass('tool-'+self.options.position)
+            self.toolbar = $('<div class="tbar-tool-container" />')
+                .addClass('tbar-tool-'+self.options.position)
                 .addClass('toolbar-'+self.options.style)
-                .append('<div class="tool-items" />')
+                .append('<div class="js-tool-items" />')
                 .append('<div class="arrow" />')
                 .appendTo('body')
                 .css('opacity', 0)
@@ -90,7 +90,7 @@ if ( typeof Object.create !== 'function' ) {
                     mouseleave: function(event){ decideTimeout(); }
                 });
 
-                $('.tool-container').on({
+                $('.tbar-tool-container').on({
                     mouseenter: function(event){ clearTimeout(moveTime); },
                     mouseleave: function(event){ decideTimeout(); }
                 });
@@ -145,7 +145,7 @@ if ( typeof Object.create !== 'function' ) {
                     mouseleave: function(event){ decideTimeout(); }
                 });
 
-                $('.tool-container').on({
+                $('.tbar-tool-container').on({
                     mouseenter: function(event){ clearTimeout(moveTime); },
                     mouseleave: function(event){ decideTimeout(); }
                 });
@@ -164,10 +164,10 @@ if ( typeof Object.create !== 'function' ) {
 
         populateContent: function() {
             var self = this;
-            var location = self.toolbar.find('.tool-items');
-            var content = $(self.options.content).clone( true ).find('a').addClass('tool-item');
+            var location = self.toolbar.find('.js-tool-items');
+            var content = $(self.options.content).clone( true ).find('a').addClass('tbar-tool-item');
             location.html(content);
-            location.find('.tool-item').on('click', function(event) {
+            location.find('.tbar-tool-item').on('click', function(event) {
                 event.preventDefault();
                 self.$elem.trigger('toolbarItemClick', this);
             });
@@ -275,19 +275,20 @@ if ( typeof Object.create !== 'function' ) {
         },
 
         getToolbarElement: function () {
-            return this.toolbar.find('.tool-items');
+            return this.toolbar.find('.js-tool-items');
         }
     };
 
     $.fn.toolbar = function( options ) {
+        var toolbarObj = null
         if ($.isPlainObject( options )) {
             return this.each(function() {
-                var toolbarObj = Object.create( ToolBar );
+                toolbarObj = Object.create( ToolBar );
                 toolbarObj.init( options, this );
                 $(this).data('toolbarObj', toolbarObj);
             });
         } else if ( typeof options === 'string' && options.indexOf('_') !== 0 ) {
-            var toolbarObj = $(this).data('toolbarObj');
+            toolbarObj = $(this).data('toolbarObj');
             var method = toolbarObj[options];
             return method.apply(toolbarObj, $.makeArray(arguments).slice(1));
         }

@@ -16,10 +16,11 @@
 		"url": "https://github.com/paulkinzett/toolbar/issues"
 	},
 	"licenses": [
-	{
-        "type": "MIT",
-        "url": "http://github.com/paulkinzett/toolbar/blob/master/LICENSE.txt"
-	}],
+		{
+			"type": "MIT",
+			"url": "http://github.com/paulkinzett/toolbar/blob/master/LICENSE.txt"
+		}
+	],
 	"devDependencies": {
 		"grunt": "~0.4.1",
 		"grunt-contrib-jshint": "~0.1.1",
