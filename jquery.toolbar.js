@@ -34,7 +34,7 @@ if ( typeof Object.create !== 'function' ) {
             self.overrideOptions();
             self.toolbar = $('<div class="tbar-tool-container" />')
                 .addClass('tbar-tool-'+self.options.position)
-                .addClass('toolbar-'+self.options.style)
+                .addClass('tbar-toolbar-'+self.options.style)
                 .append('<div class="js-tool-items" />')
                 .append('<div class="arrow" />')
                 .appendTo('body')
@@ -47,8 +47,8 @@ if ( typeof Object.create !== 'function' ) {
         overrideOptions: function() {
             var self = this;
             $.each( self.options, function( $option ) {
-                if (typeof(self.$elem.data('toolbar-'+$option)) != "undefined") {
-                    self.options[$option] = self.$elem.data('toolbar-'+$option);
+                if (typeof(self.$elem.data('tbar-toolbar-'+$option)) != "undefined") {
+                    self.options[$option] = self.$elem.data('tbar-toolbar-'+$option);
                 }
             });
         },
@@ -107,7 +107,7 @@ if ( typeof Object.create !== 'function' ) {
                 });
 
                 if (self.options.hideOnClick) {
-                    $('html').on("click.toolbar", function ( event ) {
+                    $('html').on("click.tbar-toolbar", function ( event ) {
                         if (event.target != self.elem &&
                             self.$elem.has(event.target).length === 0 &&
                             self.toolbar.has(event.target).length === 0 &&
